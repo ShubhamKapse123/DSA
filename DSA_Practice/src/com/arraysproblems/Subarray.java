@@ -1,4 +1,4 @@
-
+package com.arraysproblems;
 public class Subarray {
 	public static void main(String[] args) {
 		int arr[]= {8,2,9,10};
