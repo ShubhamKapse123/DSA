@@ -10,15 +10,19 @@ public static void main(String[] args) {
 
 	
     for(int i=0;i<c;i++){
-        for(int j=0;j<r;j++){
-            A[i][j]=A[j][i];
+        for(int j=i+1;j<r;j++){
+          int temp = A[i][j];
+      	    A[i][j] = A[j][i];
+      	    A[j][i] = temp;
         }
-    }
-    
-    for(int j=0;j<c;j++){
-        for(int i=0;i<r;i++){
-         System.out.print(A[j][i]);
-        }
+   }
+   
+  for (int i = 0; i < r; i++){
+        for(int j = 0 ; j < c/2; j++ ){
+      	    int temp =A[i][j];
+      	    A[i][j] = A[i][c-j-1];
+      	    A[i][c-j-1] = temp;
+	    }
     }
 }
 }
