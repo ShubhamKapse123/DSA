@@ -3,7 +3,10 @@ package com.bitmanupulate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 /*Problem Description
 Given an array of positive integers A, two integers appear only once, and all the other integers appear twice.
 Find the two integers that appear only once.
@@ -54,28 +57,28 @@ public static void main(String[] args) {
 	 ArrayList<Integer> arr= new ArrayList<Integer>();
 
 	 List<Integer> A= Arrays.asList(186, 256, 102, 377, 186, 377);
-	    boolean check=false;
+	 
+	 HashMap<Integer,Integer> map= new HashMap<>();
+	 
 	      for(int i=0;i<A.size();i++){
-	    	  check=false;
-	          for(int j=0;j<A.size();j++){
-	              if(i!=j)
-	                {
-	                    if(A.get(i)==A.get(j)){
-	                        check=true;
-	                        break;
-	                    }
-	                }          
+	    	 
+	    	  if(map.containsKey(A.get(i))) {
+	    		  map.put(A.get(i), 2);
+	    	  }else {
+	    		  map.put(A.get(i), 1);
+	    	  }
 	                
-	            }
-
-	               
-	    if(check==false){
-	   arr.add(A.get(i));
-	    }
+	          }
+	      
+	      for (Entry<Integer, Integer> entry : map.entrySet()) {
+	           if(entry.getValue()==1){
+	             arr.add(entry.getKey());
+	        
+	    	  }
 	      }
 
-	        
 	      Collections.sort(arr);
+	      
      System.out.print(arr);
      }
 
