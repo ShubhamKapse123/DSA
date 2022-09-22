@@ -39,7 +39,44 @@ public class LongestPalindromicSubstring {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		longestPalindrome("abba");
 
 	}
+	
+	  static String longestPalindrome(String A) {
+	        String longest=A.substring(0,1);
+	        
+	        if(A.length()<=1){
+	            return longest;
+	        }
+
+	        for(int i=0;i<A.length()-1;i++){
+	            //odd palindron
+	            String s1=expandCenter(A,i,i);
+	            if(s1.length()>longest.length()){
+	                longest=s1;
+	            }
+	              //for even palindron
+	             String s2=expandCenter(A,i,i+1);
+	            if(s2.length()>longest.length()){
+	                longest=s2;
+	            }
+	        }
+
+	     return longest;
+	    }
+
+
+	   //this two point passing this are expanding the center by using this method eg l<-c(string,l,r)->r
+	    static String expandCenter(String val,int l,int r){
+	        char [] str=val.toCharArray();
+	       while(l>=0 && r<val.length() && str[r]==str[l]){
+	           r++;
+	           l--;
+	       }
+
+	        return val.substring(l+1,r);
+
+	    }
 
 }
