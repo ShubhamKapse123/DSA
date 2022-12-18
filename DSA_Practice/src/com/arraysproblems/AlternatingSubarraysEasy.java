@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AlternatingSubarraysEasy {
-	
+	//TC:O(N), SC:O(N)
 	public static void main(String[] args) {
 		List<Integer> list= Arrays.asList(0, 0, 0, 1, 1, 0, 1);
 		int B=0;
