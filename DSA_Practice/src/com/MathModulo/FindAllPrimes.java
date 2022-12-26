@@ -43,7 +43,8 @@ The prime numbers from 1 to 12 are 2, 3, 5, 7 and 11.*/
 public class FindAllPrimes {
 
 	public static void main(String[] args) {
-		System.out.print(solve(7));
+		System.out.print(Math.sqrt(8));
+		//System.out.print(solve(7));
 	}
 	
     public static ArrayList<Integer> solve(int A) {
