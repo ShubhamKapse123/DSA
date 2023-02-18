@@ -1,4 +1,6 @@
+package com.tree;
 import java.util.ArrayList;
+import java.util.Stack;
 
 
 
@@ -87,7 +89,7 @@ public class Solution {
         TreeNode curr= A;
 
         while(curr!=null || nodeStk.size()>0){
-        ArrayList
+            while(curr!=null){
                 nodeStk.push(curr);
                 curr=curr.left;
             }
