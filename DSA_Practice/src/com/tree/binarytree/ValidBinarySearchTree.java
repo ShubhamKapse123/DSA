@@ -105,8 +105,10 @@ public static void main(String[] args) {
     public boolean isBST(TreeNode root,Integer l, Integer r){
         if(root==null) return true;
             if((l!=null&&root.val<=l)||(r!=null&&root.val>=r)){return false;}
-                boolean x=isBST(root.left,l,root.val);
-                boolean y=isBST(root.right,root.val,r);
+           //pass value for first recursive call(2,null,1)
+           boolean x=isBST(root.left,l,root.val);
+           //pass value for first recursive call(3,1,null)
+        boolean y=isBST(root.right,root.val,r);
                 return x&&y;
     }
 
