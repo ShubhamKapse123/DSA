@@ -1,4 +1,4 @@
-package com.tree.*;
+package com.tree.binarytree;
 
 // Given a Binary Search Tree A. Check whether there exists a node with value B in the BST.
 
