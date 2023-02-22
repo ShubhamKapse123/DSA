@@ -1,3 +1,5 @@
+package com.tree.binarytree;
+
 // Problem Description
 // Given a Binary Search Tree(BST) A. If there is a node with value B present in the tree delete it and return the tree.
 
