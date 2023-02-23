@@ -1,5 +1,5 @@
 
-package com.tree.binarytree;
+package com.tree.binaryandbst;
 
 // You are given a binary tree represented by root A.
 

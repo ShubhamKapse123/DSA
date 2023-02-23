@@ -1,4 +1,4 @@
-package com.tree.binarytree;
+package com.tree.binaryandbst;
 
 import java.util.List;
 
