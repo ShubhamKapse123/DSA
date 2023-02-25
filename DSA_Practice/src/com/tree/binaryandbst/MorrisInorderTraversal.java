@@ -77,19 +77,7 @@ import java.util.ArrayList;
 // Space Complexity : O(1)
 // where N = number of nodes in A
 
-/**
- * Definition for binary tree
- * class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) {
- *      val = x;
- *      left=null;
- *      right=null;
- *     }
- * }
- */
+
 public class MorrisInorderTraversal {
     //TC: O(N) SC:O(1)
     public ArrayList<Integer> solve(TreeNode A) {
