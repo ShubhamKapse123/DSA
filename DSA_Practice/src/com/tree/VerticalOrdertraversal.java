@@ -72,7 +72,7 @@ import java.util.Queue;
 // Explanation 1:
 
 //  First row represent the verical line 1 and so on.
-
+//TC:O(N),SC:O(N)
 public class VerticalOrdertraversal {
 
     public ArrayList<ArrayList<Integer>> verticalOrderTraversal(TreeNode A) 
